@@ -1,0 +1,55 @@
+title: Productivity Software Guide
+description: Comprehensive comparisons and reviews of productivity software to help you find the perfect tools
+url: https://thabo92-ai.github.io/productivity-software-guide
+baseurl: /productivity-software-guide
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/
+
+# Collections
+collections:
+  categories:
+    output: true
+    permalink: /categories/:name/
+  comparisons:
+    output: true
+    permalink: /comparisons/:name/
+  reviews:
+    output: true
+    permalink: /reviews/:name/
+  guides:
+    output: true
+    permalink: /guides/:name/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: "categories"
+    values:
+      layout: category
+  - scope:
+      path: ""
+      type: "comparisons"
+    values:
+      layout: comparison
+  - scope:
+      path: ""
+      type: "reviews"
+    values:
+      layout: review
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: guide

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% seo %}
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav class="site-nav">
+        <a href="{{ '/categories/task-management/' | relative_url }}">Task Management</a>
+        <a href="{{ '/categories/note-taking/' | relative_url }}">Note Taking</a>
+        <a href="{{ '/categories/project-management/' | relative_url }}">Project Management</a>
+        <a href="{{ '/categories/time-tracking/' | relative_url }}">Time Tracking</a>
+        <a href="{{ '/categories/communication/' | relative_url }}">Communication</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>About This Site</h3>
+          <p>Productivity Software Guide provides comprehensive comparisons and reviews to help you find the perfect productivity tools for your needs.</p>
+          <p><a href="{{ '/about/' | relative_url }}">Learn more about us</a></p>
+        </div>
+        <div class="footer-section">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="{{ '/categories/task-management/' | relative_url }}">Task Management</a></li>
+            <li><a href="{{ '/categories/note-taking/' | relative_url }}">Note Taking</a></li>
+            <li><a href="{{ '/categories/project-management/' | relative_url }}">Project Management</a></li>
+            <li><a href="{{ '/categories/time-tracking/' | relative_url }}">Time Tracking</a></li>
+            <li><a href="{{ '/categories/communication/' | relative_url }}">Communication</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Popular Comparisons</h3>
+          <ul>
+            <li><a href="{{ '/comparisons/notion-vs-evernote/' | relative_url }}">Notion vs. Evernote</a></li>
+            <li><a href="{{ '/comparisons/asana-trello-monday/' | relative_url }}">Asana vs. Trello vs. Monday</a></li>
+            <li><a href="{{ '/comparisons/slack-vs-teams/' | relative_url }}">Slack vs. Microsoft Teams</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© {{ 'now' | date: "%Y" }} Productivity Software Guide. All rights reserved.</p>
+        <p><a href="{{ '/disclosure/' | relative_url }}">Affiliate Disclosure</a> | <a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
